@@ -4,13 +4,13 @@ permissions: # This job requires write access to issues in order to add labels a
       pullrequests: write
       issues: write
 jobs:
-  greeting: //When some one makes the first pull request, congratulate him for opening his/her first pull request. 
+  greeting: # When some one makes the first pull request, congratulate him for opening his/her first pull request. 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/first-interaction@v1
         with:
           repo-token: ${[ secrets.GITHUB_TOKEN ]}
           pr-message: |
-          Congratulations for opening your first pull request! ✨
+                Congratulations for opening your first pull request! ✨
           issue-message: |
-          Congratulations for opening your first issue!
+                Congratulations for opening your first issue!
