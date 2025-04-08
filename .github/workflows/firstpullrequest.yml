@@ -1,0 +1,13 @@
+name: First pull request #the name of the workflow
+on: [pull_request] # This action will trigger when an issue is reopened or opened.
+permissions: # This job requires write access to issues in order to add labels and comment.
+      pullrequests: write
+jobs:
+  greeting: //When some one makes the first pull request, congratulate him for opening his/her first pull request. 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${[ .GITHUB_TOKEN ]}
+          pr-message: |
+          Congratulations for opening your first pull request! ✨
