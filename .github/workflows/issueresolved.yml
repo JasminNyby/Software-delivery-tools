@@ -2,8 +2,7 @@ name: The issue is resolved - an automatic comment #the name of the workflow
 on: # This action will trigger when an issue is reopened or opened.
   issues:
     types:
-      - reopened
-      - opened
+      [reopened]
 jobs: # The jobs that run in this workflow
   comment: //Automate the process so that every time an issue is closed, an automatic comment is posted stating, "The issue is now resolved." 
     runs-on: ubuntu-latest # This job will run on the latest version of Ubuntu.
