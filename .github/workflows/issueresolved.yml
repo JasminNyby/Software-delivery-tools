@@ -2,9 +2,9 @@ name: The issue is resolved - an automatic comment #the name of the workflow
 on: # This action will trigger when an issue is reopened or opened.
   issues:
     types:
-      [reopened]
+      [closed]
 jobs: # The jobs that run in this workflow
-  comment: //Automate the process so that every time an issue is closed, an automatic comment is posted stating, "The issue is now resolved." 
+  comment: # Automate the process so that every time an issue is closed, an automatic comment is posted stating, "The issue is now resolved." 
     runs-on: ubuntu-latest # This job will run on the latest version of Ubuntu.
     steps: # The "steps" section contains the individual tasks that will be performed in this job.
       - uses: actions/github-script@v6 # This step uses the "actions/github-script" action to execute a script that adds labels to the issue.
